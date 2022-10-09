@@ -1,0 +1,21 @@
+Commands to execute all
+
+npx cypress run
+
+npx cypress run --spec "path"
+
+npx cypress run --spec "path,path,path"
+
+npx cypress run --spec "cypress/e2e/login/**/*"
+npx cypress run --spec "cypress/e2e/regression/**/*"
+npx cypress run --spec "cypress/e2e/sanity/**/*"
+
+npx cypress run --spec "cypress/e2e/login/**/*" --no-exit
+
+npx cypress run --spec "cypress/e2e/login/**/*" --no-exit --headed
+
+npx cypress run --spec "cypress/e2e/login/**/*" --no-exit --headed --browser=chrome
+
+
+
+
