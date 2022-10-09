@@ -27,6 +27,14 @@ describe('This is my first test suite', function () {
         cy.get('.submit-btn').click();
         cy.get('.content').click();
         cy.get('.errorMessage').should('have.text', 'Email and Password Doesn\'t match');
+
+        cy.get("").then(function (ele) {
+            const text = ele.text();
+            cy.wrap(text).as("elementerrormessage")
+        })
+
+        cy.get("@elementerrormessage")
+
         /* ==== End Cypress Studio ==== */
     });
 })
