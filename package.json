@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "smoke": "cypress run --spec ./cypress/e2e/firstcypress.cy.js --headed",
     "regression": "cypress run --spec ./cypress/e2e/createCourse.cy.js",
-    "e2e": "cypress run",
+    "e2e": "cypress run --spec ./cypress/e2e/firstAPICall.cy.js",
     "smoke-chrome": "cypress run --spec ./cypress/e2e/first.cy.js --browser=chrome --headed"
   },
   "author": "",
