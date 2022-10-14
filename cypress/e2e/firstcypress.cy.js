@@ -1,24 +1,20 @@
 
 describe('Smoke Test', () => {
-    
-    it('verify title', () => 
-    {
+
+    it('verify title', () => {
         cy.visit("https://ineuron-courses.vercel.app")
-        cy.title().should("contain","Courses")
+        cy.title().should("contain", "Courses")
 
     });
 
-    it('verify exact title', () => 
-    {
+    it('verify exact title', () => {
         cy.visit("https://ineuron-courses.vercel.app")
-        cy.title().should("eq","iNeuron Courses111")
+        cy.title().should("eq", "iNeuron Courses")
 
     });
 
-    it('verify partial url', () => 
-    {
+    it('verify partial url', () => {
         cy.visit("https://ineuron-courses.vercel.app")
-        cy.url().should("contain","ineuron")
-
+        cy.url().should("contain", "ineuron")
     });
 });
