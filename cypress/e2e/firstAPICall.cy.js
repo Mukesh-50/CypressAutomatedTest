@@ -4,7 +4,7 @@ describe('First API Call', () => {
     it('Get Request via Cypress', () => {
 
 
-        cy.request("", "https://www.linkedin.com").then(function (resp) {
+        cy.request("https://www.linkedin.com").then(function (resp) {
 
             cy.log(resp.status)
 
