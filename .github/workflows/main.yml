@@ -12,9 +12,7 @@ jobs:
         uses: cypress-io/github-action@v4
         timeout-minutes: 10
         with:
-          build: npm run build
-          start: npm start
-          browser: chrome
+          build: npm run e2e
       - uses: actions/upload-artifact@v2
         if: failure()
         with:
