@@ -12,7 +12,7 @@ jobs:
         uses: cypress-io/github-action@v4
         timeout-minutes: 10
         with:
-          build: npm run e2e
+          spec: cypress/e2e/firstAPICall.cy.js
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         if: always()
