@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo  \"Error: no test specified\" && exit 1",
     "smoke": "cypress run --spec ./cypress/e2e/firstcypress.cy.js --headed",
     "regression": "cypress run --spec ./cypress/e2e/createCourse.cy.js",
     "e2e": "cypress run --spec ./cypress/e2e/firstAPICall.cy.js",
