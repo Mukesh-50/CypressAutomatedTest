@@ -5,6 +5,9 @@ on: push
 jobs:
   chrome:
     runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        containers: [1, 2, 3]
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -12,7 +15,11 @@ jobs:
         uses: cypress-io/github-action@v4
         timeout-minutes: 10
         with:
-          spec: cypress/e2e/firstAPICall.cy.js
+          record: true
+          parallel: true
+          group: 'Actions example'
+        env:
+          CYPRESS_RECORD_KEY: 524a247d-12cb-443b-89d8-8a4e353084ab
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         if: always()
