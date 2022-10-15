@@ -10,7 +10,18 @@ jobs:
         uses: actions/checkout@v1
       - name: Chrome
         uses: cypress-io/github-action@v4
-        timeout-minutes: 5
+        timeout-minutes: 10
         with:
-          build: npm run e2e
-          
+          build: npm run build
+          start: npm start
+          browser: chrome
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
