@@ -11,7 +11,7 @@ module.exports = defineConfig({
     embeddedScreenshots: true,
     inlineAssets: true,
     saveAllAttempts: false,
-    autoOpen: true,
+    autoOpen: false,
     overwrite: true,
     code: false
   },
