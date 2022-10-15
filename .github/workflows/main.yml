@@ -13,13 +13,10 @@ jobs:
         timeout-minutes: 10
         with:
           build: npm run e2e
-      - uses: actions/upload-artifact@v2
-        if: failure()
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
-      - uses: actions/upload-artifact@v2
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
         if: always()
         with:
-          name: cypress-videos
-          path: cypress/videos
+          name: cypress-execution-report
+          path: cypress/reports/html
+          retention-days: 30
