@@ -1,0 +1,14 @@
+name: CypressOnChrome
+
+on: push
+
+jobs:
+  chrome:
+    run-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: chrome
+        uses: cypress-io/github-action@v4
+        
+
