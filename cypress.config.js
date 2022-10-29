@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
 
-  projectId: "n6k1eq",
+  projectId: "szztj7",
 
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
@@ -11,7 +11,7 @@ module.exports = defineConfig({
     embeddedScreenshots: true,
     inlineAssets: true,
     saveAllAttempts: false,
-    autoOpen: true,
+    autoOpen: false,
     overwrite: true,
     code: false
   },
